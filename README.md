@@ -1,0 +1,1 @@
+This is a time finder C++ snippet which finds out the execution time of a program in C++ , Just change the CPP snippet code to the given JSON code by copying and pasting. And Type time-stone in a CPP file to use the snippet. A demo of it is uploaded as well.
