@@ -1,0 +1,13 @@
+{
+	"cp-extension": {
+	  "prefix": ["time-stone"],
+	  "body": ["#include <algorithm>\n #include <chrono>\n#include <iostream>\n#include<vector>\nusing namespace std;\nusing namespace std::chrono;\nint main()\n{\nvector<int> values(10000);\n// Generate Random values\nauto f = []() -> int { return rand() % 10000; };\n// Fill up the vector\ngenerate(values.begin(), values.end(), f);\n// Get starting timepoint\nauto start = high_resolution_clock::now();\n// Call the function, here sort()\nsort(values.begin(), values.end());\n// Get ending timepoint\nauto stop = high_resolution_clock::now();\n// Get duration. Substart timepoints to\n// get duration. To cast it to proper unit\n// use duration cast method\nauto duration = duration_cast<microseconds>(stop - start);\ncout << \"Time taken by function: \"  \n << duration.count() << \" microseconds\" << endl;\nreturn 0;\n}",
+
+	  
+	  ],
+	  "description": "time-stone"
+	}
+}
+
+
+
